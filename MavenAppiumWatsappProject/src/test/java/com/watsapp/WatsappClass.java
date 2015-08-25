@@ -1,6 +1,7 @@
 package com.watsapp;
 
 import java.net.MalformedURLException;
+import java.net.URL;
 
 import io.appium.java_client.android.AndroidDriver;
 
@@ -14,8 +15,8 @@ public class WatsappClass extends AbstractBaseClass{
   @Test
   public void launchingWatsapp() throws MalformedURLException {
 	  	  
-	  startAppiumServer();
-	  desiredCapabilitiesMethod("chrome", driver);
+	  //startAppiumServer();
+	  driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilitiesMethod());
 	  stopServer();
   }
   
