@@ -12,26 +12,29 @@ import org.apache.commons.exec.DefaultExecutor;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.BeforeSuite;
 
 public class AbstractBaseClass {
 
 	protected String appPath = System.getProperty("user.dir")+"/apps/whatsapp-2.12.252.apk";
 	protected DesiredCapabilities capabilities;
 	//protected AndroidDriver<WebElement> driver;
+	public Process process;
+	public String APPIUMSERVERSTART = "C:/Appium/Appium/node.exe C:/Appium/Appium/node_modules/appium/bin/appium.js";
 
-	public void startAppiumServer() {
+	public void startAppiumServer() throws IOException, InterruptedException {
 
-		CommandLine command = new CommandLine("cmd");
+		/*CommandLine command = new CommandLine("cmd");
 		command.addArgument("/c");
-		command.addArgument("C:\\Appium\\Appium\\node.exe");
-		command.addArgument("C:\\Appium\\Appium\\node_modules\\appium\\bin\\appium.js");
+		command.addArgument("C:/Appium/Appium/node.exe");
+		command.addArgument("C:/Appium/Appium/node_modules/appium/bin/appium.js");
 		command.addArgument("--address");
-		command.addArgument("127.0.0.1");
+		command.addArgument("localhost");
 		command.addArgument("--port");
-		command.addArgument("4724");
+		command.addArgument("4723");
 		command.addArgument("--no-reset");
 		command.addArgument("--log");
-		command.addArgument("D:/appiumLogs.txt");
+		command.addArgument(System.getProperty("user.dir")+"/appiumLogs.txt");
 		DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
 		DefaultExecutor executor = new DefaultExecutor();
 		executor.setExitValue(1);
@@ -40,11 +43,18 @@ public class AbstractBaseClass {
 			executor.execute(command, resultHandler);
 		} catch (IOException e) {
 			e.printStackTrace();
+		}*/
+		
+		Runtime runtime = Runtime.getRuntime();
+		process = runtime.exec(APPIUMSERVERSTART);
+		Thread.sleep(5000);
+		if(process!=null){
+			System.out.println("Appium Server Started");
 		}
 	}
 
-	public void stopServer() {
-		CommandLine command = new CommandLine("cmd");
+	public void stopAppiumServer() {
+		/*CommandLine command = new CommandLine("cmd");
 		command.addArgument("/c");
 		command.addArgument("taskkill");
 		command.addArgument("/F");
@@ -60,7 +70,12 @@ public class AbstractBaseClass {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+*/
+		
+		if(process!=null){
+			process.destroy();
+		}
+		System.out.println("Appium Server Stopped");
 	}
 
 
