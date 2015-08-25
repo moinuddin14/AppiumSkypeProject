@@ -16,13 +16,13 @@ import org.testng.annotations.BeforeSuite;
 
 public class AbstractBaseClass {
 
-	protected String appPath = System.getProperty("user.dir")+"/apps/whatsapp-2.12.252.apk";
-	protected DesiredCapabilities capabilities;
+	protected static String appPath = System.getProperty("user.dir")+"/apps/whatsapp-2.12.252.apk";
+	protected static DesiredCapabilities capabilities;
 	//protected AndroidDriver<WebElement> driver;
-	public Process process;
-	public String APPIUMSERVERSTART = "C:/Appium/Appium/node.exe C:/Appium/Appium/node_modules/appium/bin/appium.js";
+	public static Process process;
+	public static String APPIUMSERVERSTART = "C:/Appium/Appium/node.exe C:/Appium/Appium/node_modules/appium/bin/appium.js";
 
-	public void startAppiumServer() throws IOException, InterruptedException {
+	public static void startAppiumServer() throws IOException, InterruptedException {
 
 		/*CommandLine command = new CommandLine("cmd");
 		command.addArgument("/c");
@@ -53,7 +53,7 @@ public class AbstractBaseClass {
 		}
 	}
 
-	public void stopAppiumServer() {
+	public static void stopAppiumServer() {
 		/*CommandLine command = new CommandLine("cmd");
 		command.addArgument("/c");
 		command.addArgument("taskkill");
@@ -79,7 +79,7 @@ public class AbstractBaseClass {
 	}
 
 
-	public DesiredCapabilities desiredCapabilitiesMethod() throws MalformedURLException {
+	public static DesiredCapabilities desiredCapabilitiesMethod() throws MalformedURLException {
 
 			capabilities = new DesiredCapabilities();
 			capabilities.setCapability("automationName", "Appium");
