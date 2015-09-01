@@ -1,18 +1,8 @@
 package com.watsapp;
 
-import io.appium.java_client.android.AndroidDriver;
-
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
-
-import org.apache.commons.exec.CommandLine;
-import org.apache.commons.exec.DefaultExecuteResultHandler;
-import org.apache.commons.exec.DefaultExecutor;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.BeforeSuite;
 
 public class AbstractBaseClass {
 

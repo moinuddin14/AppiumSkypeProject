@@ -7,6 +7,15 @@
 	<artifactId>MavenAppiumWatsappProject</artifactId>
 	<version>0.0.1</version>
 	<dependencies>
+	
+		<!-- JACOB Dependency -->
+
+		<dependency>
+			<groupId>net.sf.jacob-project</groupId>
+			<artifactId>jacob</artifactId>
+			<version>1.14.3</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>io.appium</groupId>

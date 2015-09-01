@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26043" started-at="2015-08-25T18:06:47Z" finished-at="2015-08-25T18:07:13Z">
+  <suite name="Default suite" duration-ms="26522" started-at="2015-09-01T23:26:40Z" finished-at="2015-09-01T23:27:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26043" started-at="2015-08-25T18:06:47Z" finished-at="2015-08-25T18:07:13Z">
-      <class name="com.watsapp.MultiTouchClass">
-        <test-method status="PASS" signature="multiTouchMethod()[pri:0, instance:com.watsapp.MultiTouchClass@1134affc]" name="multiTouchMethod" duration-ms="26030" started-at="2015-08-25T13:06:47Z" finished-at="2015-08-25T13:07:13Z">
+    <test name="Default test" duration-ms="26522" started-at="2015-09-01T23:26:40Z" finished-at="2015-09-01T23:27:06Z">
+      <class name="iphone.IOSSteppers">
+        <test-method status="PASS" signature="launchingWatsapp()[pri:0, instance:iphone.IOSSteppers@6debcae2]" name="launchingWatsapp" duration-ms="26486" started-at="2015-09-01T18:26:40Z" finished-at="2015-09-01T18:27:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- multiTouchMethod -->
-      </class> <!-- com.watsapp.MultiTouchClass -->
+        </test-method> <!-- launchingWatsapp -->
+      </class> <!-- iphone.IOSSteppers -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
